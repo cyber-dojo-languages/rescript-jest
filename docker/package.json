@@ -10,7 +10,7 @@
     "prettier": "*",
     "ts-jest": "*",
     "ts-lib": "*",
-    "typescript": "*"
+    "typescript": "*",
     "strip-ansi-cli": "*"
   }
 }
