@@ -4,7 +4,9 @@ lambda { |stdout,stderr,status|
     return :green
   end
   output = stdout + stderr
-  if output.include?('Test suite failed to run')
+  if output.include?("We've found a bug")
+    :amber
+  elsif output.include?('Test suite failed to run')
     :amber
   elsif /^FAIL/.match(output)
     :red
