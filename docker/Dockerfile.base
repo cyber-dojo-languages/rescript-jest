@@ -1,9 +1,9 @@
-FROM cyberdojofoundation/javascript-node:f77006d
+FROM node:latest
 LABEL maintainer=jon@jaggersoft.com
-LABEL maintainer=?????
+LABEL maintainer=marcoemrich77@googlemail.com
 
-RUN mkdir /etc/ts
-WORKDIR /etc/ts
+RUN mkdir /etc/rescript
+WORKDIR /etc/rescript
 COPY package.json .
 RUN npm install
 
