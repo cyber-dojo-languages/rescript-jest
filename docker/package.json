@@ -1,8 +1,24 @@
 {
-  "devDependencies": {
-    "bs-platform": "8.2",
-    "@glennsl/bs-jest": "*",
-    "jest": "*",
+  "name":"hiker",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world | strip-ansi",
+    "test": "jest --env=node"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "@glennsl/bs-jest": "0.5.1",
+    "bs-platform": "8.3.1",
+    "jest": "26.6.1",
     "strip-ansi-cli": "*"
+  },
+  "jest": {
+    "testMatch": [
+      "**/*_spec.bs.js"
+    ],
+    "verbose": false
   }
 }

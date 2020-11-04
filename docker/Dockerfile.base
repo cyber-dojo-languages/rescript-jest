@@ -4,7 +4,7 @@ LABEL maintainer=marcoemrich77@googlemail.com
 
 RUN mkdir /etc/rescript
 WORKDIR /etc/rescript
-COPY package.json .
-RUN npm install
+COPY . .
+RUN npm install && npm run build && rm -rf src bsconfig.json package.json
 
 COPY red_amber_green.rb /usr/local/bin
