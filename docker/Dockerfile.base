@@ -1,10 +1,13 @@
 FROM node:latest
+#FROM ghcr.io/cyber-dojo-languages/javascript-node:14d6b57
 LABEL maintainer=jon@jaggersoft.com
 LABEL maintainer=marcoemrich77@googlemail.com
+
+RUN apt update
+RUN apt install --yes python-is-python3
 
 RUN mkdir /etc/rescript
 WORKDIR /etc/rescript
 COPY . .
-RUN npm install && chown -R sandbox .
-
-COPY red_amber_green.rb /usr/local/bin
+RUN npm install 
+RUN chown -R sandbox .

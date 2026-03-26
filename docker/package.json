@@ -10,9 +10,9 @@
   ],
   "devDependencies": {},
   "dependencies": {
-    "@glennsl/bs-jest": "0.5.1",
-    "bs-platform": "8.3.1",
-    "jest": "26.6.1",
+    "@glennsl/bs-jest": "*",
+    "bs-platform": "*",
+    "jest": "*",
     "strip-ansi-cli": "*"
   },
   "jest": {
