@@ -1,13 +1,12 @@
-FROM node:latest
-#FROM ghcr.io/cyber-dojo-languages/javascript-node:14d6b57
+# The sibling javascript-node base is published for amd64 and arm64 and already
+# carries the sandbox user, so the image runs natively on either host. Running
+# emulated is what made this start-point the slowest of them all.
+FROM ghcr.io/cyber-dojo-languages/javascript-node:14d6b57
 LABEL maintainer=jon@jaggersoft.com
 LABEL maintainer=marcoemrich77@googlemail.com
-
-RUN apt update
-RUN apt install --yes python-is-python3
 
 RUN mkdir /etc/rescript
 WORKDIR /etc/rescript
 COPY . .
-RUN npm install 
+RUN npm install
 RUN chown -R sandbox .

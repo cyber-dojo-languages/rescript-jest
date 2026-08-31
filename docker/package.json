@@ -1,24 +1,13 @@
 {
   "name":"hiker",
   "version": "0.1.0",
-  "scripts": {
-    "build": "bsb -make-world | strip-ansi",
-    "test": "jest --env=node"
-  },
   "keywords": [
-    "BuckleScript"
+    "ReScript"
   ],
   "devDependencies": {},
   "dependencies": {
-    "@glennsl/bs-jest": "*",
-    "bs-platform": "*",
-    "jest": "*",
-    "strip-ansi-cli": "*"
-  },
-  "jest": {
-    "testMatch": [
-      "**/*_spec.bs.js"
-    ],
-    "verbose": false
+    "@glennsl/rescript-jest": "*",
+    "rescript": "*",
+    "jest": "*"
   }
 }
