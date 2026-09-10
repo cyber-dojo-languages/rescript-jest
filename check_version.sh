@@ -27,5 +27,5 @@ check_version()
 # The compiler is checked as well as the test framework. It is the compiler that
 # has to offer a binary for the host architecture, which is what keeps this
 # image running natively rather than emulated.
-check_version jest     30.4 'npx jest --version'
+check_version jest     30.5 'npx jest --version'
 check_version rescript 12.3 'npx rescript --version'
