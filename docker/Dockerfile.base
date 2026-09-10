@@ -1,7 +1,7 @@
 # The sibling javascript-node base is published for amd64 and arm64 and already
 # carries the sandbox user, so the image runs natively on either host. Running
 # emulated is what made this start-point the slowest of them all.
-FROM ghcr.io/cyber-dojo-languages/javascript-node:14d6b57
+FROM ghcr.io/cyber-dojo-languages/javascript-node:04531dc
 LABEL maintainer=jon@jaggersoft.com
 LABEL maintainer=marcoemrich77@googlemail.com
 
