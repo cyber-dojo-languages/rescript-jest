@@ -5,8 +5,8 @@ readonly JSON=`cat ${MY_DIR}/docker/image_name.json`
 [[ ${JSON} =~ ${REGEX} ]]
 readonly IMAGE_NAME="${BASH_REMATCH[1]}"
 
-# Confirms the version of one tool inside the image. docker/package.json asks
-# npm for "*", so a rebuild picking up a new release stops here and names it,
+# Confirms the version of one tool inside the image. docker/install.sh names no
+# version, so a rebuild picking up a new release stops here and names it,
 # rather than changing what the image offers without saying so.
 check_version()
 {
@@ -24,8 +24,9 @@ check_version()
   fi
 }
 
-# The compiler is checked as well as the test framework. It is the compiler that
-# has to offer a binary for the host architecture, which is what keeps this
-# image running natively rather than emulated.
-check_version jest     30.5 'npx jest --version'
-check_version rescript 12.3 'npx rescript --version'
+# The compiler is checked as well as the test framework, even though it comes
+# from the base image. It is the compiler that has to offer a binary for the
+# host architecture, which is what keeps this image running natively rather
+# than emulated, and nothing else in this repo would notice the base moving.
+check_version jest     30.5 '/etc/rescript/node_modules/.bin/jest --version'
+check_version rescript 12.3 '/etc/rescript/node_modules/.bin/rescript --version'
