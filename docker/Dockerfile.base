@@ -1,4 +1,4 @@
-FROM ghcr.io/cyber-dojo-languages/rescript:90561bb
+FROM ghcr.io/cyber-dojo-languages/rescript:83a0214
 LABEL maintainer=jon@jaggersoft.com
 LABEL maintainer=marcoemrich77@googlemail.com
 
